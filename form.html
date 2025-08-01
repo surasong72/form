@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+        <style>
+            .page {
+                position: relative;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .image {
+                height: 100vh;
+                width: 500px;
+                display: inline-block;
+                position: relative;
+                background-image: url('halie-west-25xggax4bSA-unsplash.jpg');
+                background-size: cover;
+                background-position: center;
+                vertical-align: top;
+            }
+            .form_content {
+                position: relative;
+                height: 100vh;
+                float: right;
+                background-color: #f0f0f0;
+                width: calc(100% - 500px);  
+            }
+            .form_container {
+                border-style:ridge;
+                border-left:none;
+                border-right:none;
+                padding-left:20px;
+                text-align: left;
+                padding-bottom: 20px;
+                line-height: 1.5;
+            }
+            .form_container h2 {
+                font-size: 18px;
+                font-family: Arial, sans-serif;
+                color: black;
+            }
+            input:invalid {
+                border: 1px solid red;
+            }
+            .overlay_text {
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 50px;
+                background-color: black;
+                opacity: 0.5;
+                color: white;
+                font-family: 'CustomFont', Norse-Bold;
+                width: 100%;
+                height: 100px;
+            }
+            .login {
+                float: left;  
+            }
+            .login a {
+                color: #596D48; /* Green */
+                text-decoration: none;
+            }
+            .odin_logo {
+                width: 50px;
+                height: auto;
+                display: inline-block;
+            }
+            .credintial {
+                padding-left: 20px;
+            }
+            @font-face {
+                font-family: 'CustomFont'; /* Name of the font */
+                src: url('./fonts/Norse-Bold.otf') format('truetype'); /* Path to the font file */
+            }
+            .form_alignment {
+                display: inline-block;
+                width: 50%;
+            }
+            .odin_bg{
+                display: none;
+            }
+            .col-1 {
+                float: left;
+                width: 50%;
+            }
+            .col-2 {
+                float: right;
+                width: 50%;
+            }
+            .form_header {
+                margin-top:98px;
+                padding-left: 20px;
+            }
+            .form_header h2 {
+                font-size: 18px;
+                font-style: italic;
+                font-family: Arial, sans-serif;
+                color: black;
+            }
+            button[type="submit"] {
+                background-color: #596D48; /* Green */
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                margin-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page">
+            <div class="image">
+                <img class="odin_bg" src="halie-west-25xggax4bSA-unsplash.jpg" alt="background_image" style="width:100%; height:100%;">
+                <div class="overlay_text">
+                <img src="odin-lined.png" alt="odin_logo" class="odin_logo">
+                <span class="odin">ODIN</span>
+                </div>
+            </div>
+            
+            <div class="form_content">
+                <div class="form_header">
+                    <h2>This is not real online service! you know you need something <br />like this in your life to help you realize your deepest dreams. <br />sign up to get started.</h2>
+                    <br />
+                    <h2>You know you want to.</h2></div>
+                <form class="form" action="#" method="post">
+                    <div class="form_container">
+                        <h2>Let's do this!</h2>
+                        <div class="form_alignment">
+                            <div class="col-1">
+                                <label for="first_name">First Name</label><br />
+                                <input type="text" id="first_name" name="first_name" placeholder="First Name" required><br />
+                                <label for="email">Email</label><br />
+                                <input type="email" id="email" name="email" placeholder="Email" required><br />
+                                <label for="password">Password</label><br />
+                                <input type="password" id="password" name="password" placeholder="Password" required><br />
+                            </div>
+                            <div class="col-2">
+                                <label for="last_name">Last Name</label><br />
+                                <input type="text" id="last_name" name="last_name" placeholder="Last Name" required><br />
+                                <label for="phone_number">Phone Number</label><br />
+                                <input type="tel" id="phone_number" name="phone_number" placeholder="Phone Number" required><br />
+                                <label for="confirm_password">Confirm Password</label><br />
+                                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required><br />
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <button type="submit">Create Account</button>
+                </form>        
+                <div class="credintial" >
+                    <p class="login">Already have an account? <a href="#">Login</a></p>
+                </div> 
+            </div>
+        </div>
+    </body>
+</html>
